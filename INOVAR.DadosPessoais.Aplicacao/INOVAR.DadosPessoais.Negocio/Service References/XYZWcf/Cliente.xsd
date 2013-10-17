@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55025/Cliente.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" />
+  <xs:import schemaLocation="http://localhost:55025/Cliente.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" />
+  <xs:element name="obterClientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterClientesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" minOccurs="0" name="obterClientesResult" nillable="true" type="q1:ColecaoOftbClienteg4i8yo8o" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" minOccurs="0" name="obterClienteResult" nillable="true" type="q2:InstanciaOftbClienteg4i8yo8o" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="salva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" minOccurs="0" name="Cliente" nillable="true" type="q3:tbCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="salvaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" minOccurs="0" name="salvaResult" nillable="true" type="q4:InstanciaOftbClienteg4i8yo8o" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="apaga">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="apagaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" minOccurs="0" name="apagaResult" nillable="true" type="q5:InstanciaOftbClienteg4i8yo8o" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

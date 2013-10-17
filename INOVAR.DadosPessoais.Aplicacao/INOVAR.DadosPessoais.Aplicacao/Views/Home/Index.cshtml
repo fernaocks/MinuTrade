@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                Solução para a resolução do problema apresentado pela EmpresaXYZ
+            </p>
+        </div>
+    </section>
+}
+<h3>Acesso Rápido:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Consulta Clientes</h5>
+        Busca clientes na base de dados da EmpresaXYZ
+        <a href="Cliente">Consulta Cliente</a>
+    </li>
+
+    <li class="two">
+        <h5>Cadastrar Novo Cliente</h5>
+        Cadastrar dados do cliente na base de dados
+        <a href="cliente/create">Cadastrar Cliente</a>
+    </li>
+
+</ol>

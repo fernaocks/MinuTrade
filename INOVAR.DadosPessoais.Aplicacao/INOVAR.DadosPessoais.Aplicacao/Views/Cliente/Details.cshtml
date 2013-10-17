@@ -1,0 +1,57 @@
+﻿@model INOVAR.DadosPessoais.Dominio.Modelo.tbCliente
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<fieldset>
+    <legend>tbCliente</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdCliente)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdCliente)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.telefoneResidencial)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.telefoneResidencial)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.endereco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.endereco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dataNascimento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dataNascimento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.numeroCelular)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.numeroCelular)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

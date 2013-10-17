@@ -1,0 +1,61 @@
+﻿@model INOVAR.DadosPessoais.Dominio.Modelo.tbCliente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Confirmar Exclusão</h2>
+
+<h3>Você tem certeza que deseja apagar o registro abaixo?</h3>
+<fieldset>
+    <legend>tbCliente</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdCliente)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdCliente)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.telefoneResidencial)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.telefoneResidencial)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.endereco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.endereco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dataNascimento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dataNascimento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.numeroCelular)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.numeroCelular)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

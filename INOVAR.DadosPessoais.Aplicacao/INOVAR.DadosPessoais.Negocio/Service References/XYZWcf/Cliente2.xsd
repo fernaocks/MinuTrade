@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOftbCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tbCliente" nillable="true" type="tns:tbCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftbCliente" nillable="true" type="tns:ArrayOftbCliente" />
+  <xs:complexType name="tbCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="dataNascimento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="endereco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroCelular" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefoneResidencial" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tbCliente" nillable="true" type="tns:tbCliente" />
+</xs:schema>

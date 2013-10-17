@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55025/Cliente.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" />
+  <xs:complexType name="ColecaoOftbClienteg4i8yo8o">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ColecaoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="tbCliente" Namespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" minOccurs="0" name="Lista" nillable="true" type="q1:ArrayOftbCliente" />
+      <xs:element minOccurs="0" name="Mensagem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucesso" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ColecaoOftbClienteg4i8yo8o" nillable="true" type="tns:ColecaoOftbClienteg4i8yo8o" />
+  <xs:complexType name="InstanciaOftbClienteg4i8yo8o">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InstanciaOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Biblioteca" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="tbCliente" Namespace="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mensagem" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/XYZ.DadosPessoais.Dominio.Modelo" minOccurs="0" name="Objeto" nillable="true" type="q2:tbCliente" />
+      <xs:element minOccurs="0" name="Sucesso" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InstanciaOftbClienteg4i8yo8o" nillable="true" type="tns:InstanciaOftbClienteg4i8yo8o" />
+</xs:schema>

@@ -1,0 +1,68 @@
+﻿@model INOVAR.DadosPessoais.Dominio.Modelo.tbCliente
+
+@{
+    ViewBag.Title = "Novo Cliente";
+}
+
+<h2>Novo Cliente</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>tbCliente</legend>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nome)
+            @Html.ValidationMessageFor(model => model.nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.telefoneResidencial)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.telefoneResidencial)
+            @Html.ValidationMessageFor(model => model.telefoneResidencial)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.endereco)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.endereco)
+            @Html.ValidationMessageFor(model => model.endereco)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dataNascimento)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dataNascimento)
+            @Html.ValidationMessageFor(model => model.dataNascimento)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.numeroCelular)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.numeroCelular)
+            @Html.ValidationMessageFor(model => model.numeroCelular)
+        </div>
+
+        <p>
+            <input type="submit" value="Salvar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Retornar", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
